@@ -3,10 +3,10 @@ const Footer = () =>{
     // Data terstruktur untuk ikon sosial media
     const socialLinks = [
         // Ganti URL_xxx dengan link asli Anda
-        { icon: "ri-instagram-fill", url: "URL_INSTAGRAM" }, 
-        { icon: "ri-linkedin-box-fill", url: "URL_LINKEDIN" }, // Tambahkan LinkedIn (penting untuk portofolio)
-        { icon: "ri-youtube-fill", url: "URL_YOUTUBE" },
-        { icon: "ri-github-fill", url: "URL_GITHUB" },
+        { icon: "ri-instagram-fill", url: "https://www.instagram.com/dicha16_/" }, 
+        { icon: "ri-linkedin-box-fill", url: "https://linkedin.com/in/mahardicha" }, // Tambahkan LinkedIn (penting untuk portofolio)
+        { icon: "ri-youtube-fill", url: "https://www.youtube.com/@mahardicha16" },
+        { icon: "ri-github-fill", url: "https://github.com/AkaraNabastala" },
     ];
 
     return (

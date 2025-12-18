@@ -4,6 +4,7 @@ const navLinks = [
     { href: "#beranda", label: "Beranda" },
     { href: "#tentang", label: "Tentang" },
     { href: "#proyek", label: "Proyek" },
+    { href: "#sertifikat", label: "Sertifikat" },
     { href: "#kontak", label: "Kontak" },
 ];
 
@@ -13,9 +14,6 @@ const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
     
-    // =========================================================
-    // --- LOGIKA SMART HEADER & SCROLL SPY ---
-    // =========================================================
     useEffect(() => {
         let isTicking = false;
         
@@ -166,7 +164,7 @@ const Navbar = () => {
                                     ${link.href === '#beranda' ? 'ri-home-4-line' : 
                                       link.href === '#tentang' ? 'ri-user-line' : 
                                       link.href === '#proyek' ? 'ri-folder-open-line' : 
-                                      'ri-mail-line'} text-xl
+                                      link.href === '#sertifikat' ? 'ri-article-line' :                                      'ri-mail-line'} text-xl
                                 `}></i>
                                 <span className="text-xs mt-1">{link.label}</span>
                             </a>

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const CVModal = ({ isVisible, onClose, cvUrl, downloadUrl }) => {
-    
     if (!isVisible) return null;
 
     const handleBackdropClick = (e) => {
@@ -14,44 +13,60 @@ const CVModal = ({ isVisible, onClose, cvUrl, downloadUrl }) => {
         <div 
             id="modal-backdrop"
             onClick={handleBackdropClick}
-            className="fixed inset-0 bg-zinc-950/90 backdrop-blur-sm z-[9000] flex items-center justify-center p-4 transition-opacity duration-300"
+            className="fixed inset-0 bg-zinc-950/90 backdrop-blur-sm z-[9000] flex items-center justify-center p-4"
         >
             <div 
-                className="bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col transform scale-100 opacity-100 transition-transform duration-300"
+                className="bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in duration-300"
             >
-                <div className="flex justify-between items-center p-5 border-b border-zinc-800">
-                    <h3 className="text-xl font-semibold text-violet-400">Pratinjau Curriculum Vitae</h3>
+                {/* Header */}
+                <div className="flex justify-between items-center p-4 border-b border-zinc-800">
+                    <div>
+                        <h3 className="text-lg font-bold text-white">Curriculum Vitae</h3>
+                        <p className="text-xs text-zinc-400">Pratinjau Dokumen</p>
+                    </div>
                     <button 
                         onClick={onClose} 
-                        className="text-zinc-400 hover:text-white transition"
+                        className="w-9 h-9 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-700 transition"
                         aria-label="Tutup Modal"
                     >
-                        <i className="ri-close-line text-2xl"></i>
+                        <i className="ri-close-line text-xl"></i>
                     </button>
                 </div>
-                <div className="flex-grow p-4 overflow-y-auto">
+
+                {/* PDF Container - Dioptimalkan untuk Rasio A4 */}
+                <div className="flex-grow p-2 bg-zinc-950 flex justify-center overflow-hidden">
                     {cvUrl ? (
                         <iframe
                             src={cvUrl}
                             title="Curriculum Vitae Preview"
-                            className="w-full h-[70vh] border-none rounded-lg bg-zinc-800"
-                            style={{ minHeight: '500px' }}
+                            // h-[65vh] menjaga agar footer tombol tetap terlihat di atas taskbar
+                            className="w-full h-[65vh] border-none rounded-lg bg-zinc-800"
                         >
-                            <p className="p-4 text-center text-zinc-500">Browser Anda tidak mendukung pratinjau PDF. Silakan unduh langsung.</p>
+                            <p className="p-4 text-center text-zinc-500">Browser tidak mendukung pratinjau. Silakan unduh.</p>
                         </iframe>
                     ) : (
-                        <p className="text-center text-red-400 p-10">URL CV tidak ditemukan.</p>
+                        <div className="p-20 text-center">
+                            <i className="ri-error-warning-line text-4xl text-zinc-700 mb-2"></i>
+                            <p className="text-zinc-500">URL tidak ditemukan.</p>
+                        </div>
                     )}
                 </div>
-                <div className="p-5 border-t border-zinc-800 flex justify-center">
+
+                {/* Footer / Download Button */}
+                <div className="p-4 border-t border-zinc-800 bg-zinc-900 flex flex-col sm:flex-row gap-3">
                     <a
                         href={downloadUrl}
                         download
-                        onClick={onClose}
-                        className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 px-7 py-3 rounded-full font-medium transition shadow-lg shadow-violet-800/50"
+                        className="flex-1 inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-700 text-white py-3 rounded-xl font-bold transition shadow-lg shadow-violet-800/40 text-sm"
                     >
-                        Download CV <i className="ri-download-line text-lg"></i>
+                        Download PDF <i className="ri-download-2-line"></i>
                     </a>
+                    <button 
+                        onClick={onClose}
+                        className="flex-1 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 py-3 rounded-xl font-medium transition text-sm"
+                    >
+                        Tutup
+                    </button>
                 </div>
             </div>
         </div>

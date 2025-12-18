@@ -1,0 +1,57 @@
+<div className="pendidikan mt-24">
+            <h3 className="text-3xl lg:text-4xl font-bold mb-8" data-aos="fade-up">Edukasi</h3>
+            
+            {listEdukasi.map((edu, index) => ( // <-- Looping semua riwayat pendidikan
+                <div 
+                    key={edu.id}
+                    className="bg-zinc-800 p-8 rounded-2xl border border-violet-700/50 space-y-6 shadow-xl mb-6 last:mb-0" // last:mb-0 untuk menghilangkan margin bawah di elemen terakhir
+                    data-aos="fade-up" 
+                    data-aos-delay={200 + (index * 100)} // Menambahkan delay AOS berdasarkan index
+                >
+                    <div className="flex items-start gap-6 border-b border-zinc-700 pb-4">
+                        
+                        {/* Kotak Logo */}
+                        {edu.logo && (
+                            <div className="flex-shrink-0 w-16 h-16 bg-white/10 p-3 rounded-xl flex items-center justify-center border border-violet-500">
+                                <img 
+                                    src={edu.logo}
+                                    alt={`Logo ${edu.institusi}`}
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                        )}
+                        
+                        {/* Detail Pendidikan */}
+                        <div className="flex-grow">
+                            <div className="flex justify-between items-start flex-wrap mb-1">
+                                <h4 className="text-xl sm:text-2xl font-bold text-violet-400">
+                                    {edu.institusi}
+                                </h4>
+                                <span className="text-sm font-medium text-zinc-500 bg-zinc-700/50 px-3 py-1 rounded-full whitespace-nowrap">
+                                    {edu.tahun}
+                                </span>
+                            </div>
+                            <h5 className="text-lg font-medium text-white mb-2">{edu.jurusan}</h5>
+                            <p className="text-zinc-400 text-sm">
+                                {edu.deskripsi}
+                            </p>
+                        </div>
+                    </div> 
+                    
+                    {/* Spesialisasi (Hanya ditampilkan jika ada data spesialisasi) */}
+                    {edu.spesialisasi && edu.spesialisasi.length > 0 && (
+                        <div className="pt-4">
+                            <h5 className="text-lg font-semibold text-white mb-3">Fokus & Keahlian Utama:</h5>
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-zinc-300">
+                                {edu.spesialisasi.map((item, key) => (
+                                    <li key={key} className="flex items-center gap-2">
+                                        <i className="ri-check-line text-violet-500"></i> {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                     
+                </div>
+            ))} 
+          </div>
