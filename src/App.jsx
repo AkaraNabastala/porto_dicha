@@ -6,8 +6,8 @@ import ToolModal from "./components/ToolModal";
 import ProyekModal from "./components/ProyekModal";
 import CertModal from "./components/CertModal";
 
-const CV_PREVIEW_URL = "/assets/cv_dicha.pdf#toolbar=0&navpanes=0&scrollbar=0"; 
-const CV_DOWNLOAD_URL = "/assets/cv_dicha.pdf";
+const CV_PREVIEW_URL = "assets/cv_dicha.pdf#toolbar=0&navpanes=0&scrollbar=0"; 
+const CV_DOWNLOAD_URL = "assets/cv_dicha.pdf";
 
 const categories = ['Semua', 'Web Development', 'Desain Visual', 'Multimedia', 'Infrastruktur/Sistem']; 
 // function App() {
