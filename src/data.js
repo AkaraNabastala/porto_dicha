@@ -126,6 +126,7 @@ export const listTools = [
 import Proyek1 from "/assets/proyek/proyek1.webp";
 import Proyek2 from "/assets/proyek/proyek2.webp";
 import Proyek3 from "/assets/proyek/proyek3.webp";
+import Proyek4 from "/assets/proyek/proyek4.webp";
 
 export const listProyek = [
   {
@@ -160,6 +161,17 @@ export const listProyek = [
     dad: "300",
     kategori: "Infrastruktur/Sistem",
     link: "#",
+  },
+  {
+    id: 4,
+    gambar: Proyek4, // Pastikan kamu sudah mengimport gambar nota hidup
+    nama: "Web Nota Hidup",
+    desk: "Website profil bisnis jasa undangan digital profesional.",
+    deskLengkap: "Sebuah platform profil bisnis yang dirancang untuk memperkenalkan jasa pembuatan undangan digital. Fokus pada User Experience yang elegan, responsif, dan integrasi katalog produk yang modern.",
+    tools: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+    dad: "100",
+    kategori: "Web Development",
+    link: "https://akaranabastala.github.io/Web_NotaHidup/",
   },
 ];
 
