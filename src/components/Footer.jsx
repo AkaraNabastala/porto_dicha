@@ -73,7 +73,7 @@ const Footer = () => {
                     <div className="flex items-center gap-2 group">
                         <span className="text-zinc-600 text-[9px] uppercase tracking-widest">Crafted by</span>
                         <span className="text-zinc-300 text-xs font-serif italic tracking-widest group-hover:text-violet-400 transition-colors">
-                            Naba<span className="not-italic font-bold font-sans text-violet-500 tracking-tighter">stala</span>
+                            Nabas<span className="not-italic font-bold font-sans text-violet-500 tracking-tighter">tala</span>
                         </span>
                     </div>
                 </div>
