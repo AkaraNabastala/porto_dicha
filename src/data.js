@@ -127,6 +127,7 @@ import Proyek1 from "/assets/proyek/proyek1.webp";
 import Proyek2 from "/assets/proyek/proyek2.webp";
 import Proyek3 from "/assets/proyek/proyek3.webp";
 import Proyek4 from "/assets/proyek/proyek4.webp";
+import Proyek5 from "/assets/proyek/proyek5.webp";
 
 export const listProyek = [
   {
@@ -172,6 +173,17 @@ export const listProyek = [
     dad: "100",
     kategori: "Web Development",
     link: "https://akaranabastala.github.io/Web_NotaHidup/",
+  },
+  {
+    id: 5,
+    gambar: Proyek5, // Pastikan Anda melakukan import: import Proyek5 from "../assets/proyek5.webp"
+    nama: "Portal Hotspot SMK Diponegoro",
+    desk: "Sistem autentikasi hotspot Mikrotik kustom dengan desain modern.",
+    deskLengkap: "Proyek desain ulang UI/UX portal login Mikrotik untuk SMK Diponegoro Majenang. Menggunakan konsep Glassmorphism yang responsif, single-screen layout, dan integrasi keamanan MD5 untuk mendukung ekosistem pembelajaran digital (Smart Campus Network).",
+    tools: ["HTML5", "Tailwind CSS", "JavaScript", "Mikrotik RouterOS"],
+    dad: "100",
+    kategori: "Network Branding",
+    link: "https://github.com/AkaraNabastala/landing_page_mikrotik",
   },
 ];
 
