@@ -13,12 +13,12 @@ import Tools6 from "/assets/tools/js.png";
 // import Tools7 from "/assets/tools/nodejs.png";
 import Tools8 from "/assets/tools/github.png";
 import Tools10 from "/assets/tools/canva.png";
-
 import Tools11 from "/assets/tools/photoshop.png"; 
 import Tools12 from "/assets/tools/premierepro.png"; 
 import Tools13 from "/assets/tools/linux.png"; 
 import Tools14 from "/assets/tools/docker.png"; 
 import Tools15 from "/assets/tools/proxmox.png"; 
+import Tools15 from "/assets/tools/inno_setup.jpg"; 
 
 export const listTools = [
   {
@@ -121,6 +121,14 @@ export const listTools = [
     dad: "1300", 
     deskripsiLengkap: "Platform virtualisasi *open-source* yang saya gunakan untuk mengelola *Home Lab* dan lingkungan server mini. Mahir dalam membuat dan mengelola Virtual Machines (VM) dan Containers (LXC) untuk testing dan pengembangan.",
   },
+  {
+    id: 15, // Silakan sesuaikan nomor ID-nya
+    gambar: Tools16, // Sesuaikan dengan nama variabel gambar Inno Setup Anda
+    nama: "Inno Setup",
+    ket: "Installer Builder", // Atau bisa juga "Software Packaging"
+    dad: "1400", // Sesuaikan dengan delay animasi Anda (sepertinya ini untuk AOS delay)
+    deskripsiLengkap: "Digunakan untuk membungkus file program Windows beserta seluruh dependensinya menjadi satu file pemasang (installer) tunggal yang siap didistribusikan. Memungkinkan pembuatan wizard instalasi, pengaturan direktori, pembuatan shortcut, hingga uninstaller secara otomatis menggunakan skrip.",
+  },
 ];
 
 import Proyek1 from "/assets/proyek/proyek1.webp";
@@ -128,6 +136,7 @@ import Proyek2 from "/assets/proyek/proyek2.webp";
 import Proyek3 from "/assets/proyek/proyek3.webp";
 import Proyek4 from "/assets/proyek/proyek4.webp";
 import Proyek5 from "/assets/proyek/proyek5.webp";
+import Proyek5 from "/assets/proyek/sistem_absensi.png";
 
 export const listProyek = [
   {
@@ -170,7 +179,7 @@ export const listProyek = [
     desk: "Website profil bisnis jasa undangan digital profesional.",
     deskLengkap: "Sebuah platform profil bisnis yang dirancang untuk memperkenalkan jasa pembuatan undangan digital. Fokus pada User Experience yang elegan, responsif, dan integrasi katalog produk yang modern.",
     tools: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
-    dad: "100",
+    dad: "400",
     kategori: "Web Development",
     link: "https://akaranabastala.github.io/Web_NotaHidup/",
   },
@@ -181,10 +190,21 @@ export const listProyek = [
     desk: "Sistem autentikasi hotspot Mikrotik kustom dengan desain modern.",
     deskLengkap: "Proyek desain ulang UI/UX portal login Mikrotik untuk SMK Diponegoro Majenang. Menggunakan konsep Glassmorphism yang responsif, single-screen layout, dan integrasi keamanan MD5 untuk mendukung ekosistem pembelajaran digital (Smart Campus Network).",
     tools: ["HTML5", "Tailwind CSS", "JavaScript", "Mikrotik RouterOS"],
-    dad: "100",
+    dad: "500",
     kategori: "Network Branding",
     link: "https://github.com/AkaraNabastala/landing_page_mikrotik",
   },
+  {
+  id: 6, // Silakan sesuaikan ID-nya
+  gambar: Proyek6, // Pastikan Anda melakukan import gambar yang sesuai
+  nama: "Sistem Absensi Desktop", // Ubah jika ada nama spesifik/instansi
+  desk: "Aplikasi manajemen absensi berdesain modern yang didistribusikan sebagai installer Windows.",
+  deskLengkap: "Pengembangan sistem informasi absensi menggunakan React JS dan Tailwind CSS untuk menghasilkan antarmuka pengguna yang interaktif dan responsif. Aplikasi ini kemudian dipaketkan menjadi file pemasang tunggal (.exe) menggunakan Inno Setup, sehingga mempermudah pengguna akhir melakukan instalasi layaknya aplikasi desktop Windows (stand-alone) pada umumnya.",
+  tools: ["React JS", "Tailwind CSS", "Inno Setup"], // Tambahkan "Electron" atau "Tauri" jika Anda menggunakannya sebagai jembatan
+  dad: "600", // Sesuaikan delay animasinya
+  kategori: "Desktop Application", // Karena hasil akhirnya berupa installer Inno Setup
+  link: "https://drive.google.com/file/d/1Ws4U5qnfQfsJ0jt95GzD0TKDzm5JJ1ys/view?usp=sharing", // Ganti dengan link repository atau demo yang sesuai
+},
 ];
 
 import LogoSD from "/assets/edu/logo_sd.png"; 
@@ -271,4 +291,5 @@ export const listSertifikat = [
     dad: "300",
     desk: "Sertifikat ini menandai keberhasilan dalam Tes Kompetensi Akademik (TKA) yang mencakup berbagai bidang pengetahuan umum dan kemampuan akademik."
   },
+
 ];
