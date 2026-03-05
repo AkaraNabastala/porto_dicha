@@ -14,7 +14,6 @@ import Tools6 from "/assets/tools/js.png";
 import Tools7 from "/assets/tools/nodejs.png";
 import Tools8 from "/assets/tools/github.png";
 import Tools10 from "/assets/tools/canva.png";
-import Tools10 from "/assets/tools/innosetup.jpg";
 
 export const listTools = [
   {
@@ -81,7 +80,6 @@ import Proyek3 from "/assets/proyek/proyek3.webp";
 import Proyek4 from "/assets/proyek/proyek4.webp";
 import Proyek5 from "/assets/proyek/proyek5.webp";
 import Proyek6 from "/assets/proyek/proyek6.webp";
-import Proyek6 from "/assets/proyek/sistem_absensi.png";
 
 export const listProyek = [
   {
@@ -132,14 +130,7 @@ export const listProyek = [
     tools: ["NextJS", "TailwindCSS", "Framermotion"],
     dad: "700",
   },
-  {
-    id: 6,
-    gambar: Proyek7,
-    nama: "Sistem Absensi Digital",
-    desk: "Aplikasi ini adalah versi 1.0 yang saya kembangkang. Kedepannya akan saya update versi aplikasinya agar bisa terintegrasi dengan WhatsApp dan Beberapa aplikasi",
-    tools: ["NextJS", "TailwindCSS", "Inno Setup"],
-    dad: "800",
-  },
 ];
+
 
 
